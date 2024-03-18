@@ -8,3 +8,8 @@ NixOS was initially selected as the operating system due to its reproducible and
 
 * OS Comparisons  
 Given the limited progress made and NixOS's complexity, the decision was made to switch to an alternative operating system, with Ubuntu being the selected replacement. This choice was influenced by Ubuntu's user-friendly nature, making it a practical option for those new to Linux, as well as its broad accessibility. It has efficient package management via APT and DEB systems and offers stable releases with extended support. Additionally, its substantial documentation and supportive community simplify troubleshooting. Ubuntu also emphasises security in system integration and has a wide repository containing over 60,000 packages, further validating its selection.
+
+### N?- Future Work
+
+* SingularityCE  
+Another next step that could be taken would be to implement Singularity. Singularity is a container platform designed for high-performance computing (HPC), scientific computing, and data-intensive tasks. It allows users to create portable, reproducible computing environments by encapsulating software, libraries and data in a single package. Singularity provides security by allowing containers to run without granting users elevated privileges primarily because it runs containers with the privileges of the user who launches them rather than requiring root or administrative privileges. It supports integration with existing HPC resources and workflows, such as Slurm, offering compatibility with various container formats, such as Docker, through conversion tools.
