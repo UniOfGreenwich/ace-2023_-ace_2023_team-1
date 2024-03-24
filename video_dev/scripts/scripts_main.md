@@ -1,9 +1,9 @@
 ### 2- System Design and Architecture
 
 * Design and architecture  
-To develop the system’s design and architecture, we had to work with components provided by the university. We were provided with 10 ASUS CS-8 motherboards, 10 amount of SD cards, multiple 220W PSUs and a 5-port switch.
+To develop the system’s design and architecture, we had to work with components provided by the university. We were provided with 10 ASUS CS-8 motherboards, 10 SD cards, multiple 220W PSUs and a 5-port switch.
 
-To meet the modular criteria of the project, a single module consists of three nodes, each one containing a motherboard with its corresponding PSU, and the fourth node being the head node which holds the single board computer and the switch. Consider Figure 1.
+To meet the modular criteria of the project, a single module consists of four nodes, three containing a motherboard with its corresponding PSU, and the fourth node being the head node which holds the single board computer and the switch. Consider Figure 1.
 
 Due to the switch having 5 ethernet ports, 3 ports are taken by the motherboards; one port is taken by the single board computer, leaving an extra ethernet port to allow the entire HPC module to be connected to another copy of the HPC module in a daisy chain configuration. This daisy chain can be extended to multiple copies of the HPC. Consider Figure 2.
 
