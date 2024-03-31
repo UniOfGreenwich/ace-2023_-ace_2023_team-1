@@ -58,6 +58,7 @@ Edit the hosts file using sudo nano /etc/hosts
 ## Making a Shared Storage
 
 For a cluster to run optimally, it is important that the job can run on any node on the cluster. Therefore, all nodes must be able to access the same files. Therefore, a 16GB USB drive is connected to the head node (raspberry pi) and that drive is shared accross the network. The drive is exported as a network file system and is mounted on all nodes so that it can be accessed.
+Here, the USB drive is formatted and a d
 
 ### STEP 1
 
@@ -66,6 +67,7 @@ For a cluster to run optimally, it is important that the job can run on any node
 Locate the flash drive using ```lsblk``` command. 
 
 ```
+
 ```
 
 The flash drive is sda. perform the following steps:
@@ -96,13 +98,16 @@ To make our file system perform the following
 sudo mkfs /dev/sda1
 ```
 
-Create a directory to mount. Change the permissions to make folder accessible
+The above steps led to the formatting of the USB drive and creating one partition to be shared across the network.
+Create a directory to mount. The USB strick is mounted onto this directory. Change the permissions to make folder accessible
 
 ```
 sudo mkdir /clusterfs
 sudo chown nobody.nogroup -R /clusterfs
 sudo chmod 777 -R /clusterfs
 ```
+
+Next, Automatic mounting needs to be setup. This enables the USB drive to mount onto the directory automatically when head node boots. Given below are the steps to perform setup automatic mounting.
 
 Identify the UUID using command ```blkid```. Take note of the UUID for the /dev/sda directory and the value of PE. fstab file needs to be edited to mount the drive on boot. Enter the file using ```sudo nano /etc/fstab``` and add the below
 
@@ -124,7 +129,7 @@ sudo chmod -R 776 /clusterfs
 ### STEP 2
 export the mounted drive so other nodes can access them. Enter the /etc/exports file using ```sudo nano /etc/exports```
 
-<i>This tutorial assumes you have followed the PXE boot tutorial already. If not set up DHCP by following isntructions here (insert link) </i>
+<i>This tutorial assumes you have followed the PXE boot tutorial already. If not set up DHCP by following instructions here (insert link) </i>
 
 ```
 # add this below the already existing line
@@ -204,7 +209,7 @@ The ```/etc/slurm-llnl/cgroup.conf``` can be created to enable cgroups kernel is
 ```
 sudo nano /etc/slurm-llnl/cgroup.conf
 
-# enter the follwing in the cgroup.conf file
+# enter the following in the cgroup.conf file
 CgroupMountpoint="/sys/fs/cgroup"
 CgroupAutomount=yes
 CgroupReleaseAgentDir="/etc/slurm-llnl/cgroup"
@@ -279,7 +284,7 @@ sudo cp /clusterfs/cgroup* /etc/slurm-llnl
 Firstly, test munge communciation. Generate key on master node and the compute node that the command is being run on must be able to decrypt it. Run the following command.
 
 ```
-ssh ubuntu@node01 munge -n | unmunge
+ssh <username>@<masternode> munge -n | unmunge
 ```
 
 The above process is verified if a reply is received saying STATUS: Success (0). If not, it is because the munge keys of the head node and compute node dont match. munge key is present in /etc/munge/munge.key
