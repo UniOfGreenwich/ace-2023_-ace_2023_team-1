@@ -11,13 +11,15 @@ The development of the video has been broken down into chapter sections similarl
 ```
 ├── video_dev
 │   ├── scripts
-│   │   ├── ahmed.md
-│   │   ├── fikayo.md
-│   │   ├── simona.md
-│   │   └── wojtek.md
+│   │   ├── ahmed_script.md
+│   │   ├── fikayo_script.md
+│   │   ├── simona_script.md
+│   │   └── wojtek_script.md
+│   ├── presentation
+│   │   └── final_presentation.ppt
 │   ├── videos
 │   │   └── final_video.mp4
-│   ├── video_README.md
+│   ├── video_readme.md
 ```
 
 ## Video Structure
@@ -50,9 +52,3 @@ The video structure is divided into the following sections alongside the assigne
 11. Conclusion & Future Work (Fikayo)
 
 ## Final Video
-
-
-
-
-
-
