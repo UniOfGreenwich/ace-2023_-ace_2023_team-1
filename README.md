@@ -77,6 +77,13 @@ For detailed reports, insights, and technical documentation, the documentation i
 ### Hardware setup
 ### Software setup
 ### Recomandations
+Some of the project's next steps include incorporating technologies to improve its capabilities and test its abilities. Integrating SingularityCE can simplify the deployment of complex applications in HPC and scientific computing environments, leveraging containerisation for portability and reproducibility. John the Ripper could enhance security by identifying vulnerabilities in different operating systems. Prometheus and Jaeger will facilitate the monitoring and tracking framework, offering insights into system performance and operational dynamics. Furthermore, these integrations will be relatively easy by taking advantage of Slurm's compatibility with Docker.
+Users are encouraged to consult the official documentation linked below for installation guidance on these technologies.
+
+- [SingularityCE Documentation](https://docs.sylabs.io/guides/latest/user-guide/)
+- [John the Ripper Documentation](https://github.com/openwall/john/tree/bleeding-jumbo)
+- [Prometheus Documentation](https://prometheus.io/docs/prometheus/latest/installation/)
+- [Jaeger Documentation](https://www.jaegertracing.io/docs/1.55/getting-started/)
 
 ## Contributors
 - [@Wertasile](https://github.com/Wertasile)
