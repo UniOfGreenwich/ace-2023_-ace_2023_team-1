@@ -2,7 +2,7 @@
 # Design & Development of a Modular High-Performance Computer (HPC)
 ## ELEE1119 Advantage Computer Engineering 2023/24
 
-## Introduction & About Project
+## Introduction
 Welcome to the group project README file for Module Leader Sebastian Blair's Advanced Computer Engineering module from Team -1. This document provides an overview of the Design and Implementation of High-Performance Computing Systems project, including an explanation of the objectives, the methodology used, and the steps taken to develop the final product: a prototype that proves the collaborative effort and approach technician. It is important to note that although a significant milestone has been reached with this prototype's creation, there is room for further development and improvements.
 
 For detailed reports, insights, and technical documentation, the documentation is hosted in a separate branch of this repository.
