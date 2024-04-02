@@ -128,7 +128,7 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
 
 SLURM needs to be able to perform its jobs on any node of the cluster. This makes it so that each node should be able to access the same files. Therefore, a shared storage would have to be created. In this project, a 16GB USB drive connected to the head node is exported as a Network File System.
 
-[Click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/Slurm.md) to do the setup USB as shared storage and setup SLURM as a whole.
+[Click here]([../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/Slurm.md](https://github.com/TeachingMaterial/ace-2023_-ace_2023_team-1/blob/main/research_folder/Software/Implementation/PXE.md)) to do the setup USB as shared storage and setup SLURM as a whole.
 
 
 ### Testing with R
