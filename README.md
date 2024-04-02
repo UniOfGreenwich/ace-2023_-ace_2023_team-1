@@ -7,19 +7,22 @@
 </p>
 
 ## Table of Contents
-- [Video](#video)
-- [Introduction](#introduction)
-- [Setup](#setup)
-- [Design and Manufacturing](#design-and-manufacturing)
-  - [Cooling Overview](#cooling-overview)
-- [Software Implementation](#software-implementation)
-  - [PXE Boot](#pxe-boot)
-  - [OpenSSH](#openssh)
-  - [Slurm](#slurm)
-  - [Testing with R](#testing-with-r)
-- [Recommendations](#recommendations)
-- [Contributors](#contributors)
-- [License](#license)
+- [Design \& Development of a Modular High-Performance Computer (HPC)](#design--development-of-a-modular-high-performance-computer-hpc)
+  - [ELEE1119 Advanced Computer Engineering | Academic Year 2023/24](#elee1119-advanced-computer-engineering--academic-year-202324)
+  - [Table of Contents](#table-of-contents)
+  - [Video](#video)
+  - [Introduction](#introduction)
+  - [Setup](#setup)
+  - [Design and Manufacturing](#design-and-manufacturing)
+    - [Cooling overview](#cooling-overview)
+  - [Software Implementation](#software-implementation)
+    - [PXE Boot](#pxe-boot)
+    - [OpenSSH](#openssh)
+    - [Slurm](#slurm)
+    - [Testing with R](#testing-with-r)
+  - [Recommendations](#recommendations)
+  - [Contributors](#contributors)
+  - [License](#license)
 
 ## Video
 <p align="center">
@@ -96,7 +99,7 @@ A prerequisite for slurm, to allow secure file transfer and communication betwee
 Slurm is a highly scalable and flexible workload manager used primarily in HPC environments. Slurm provides mechanisms for inter-task communication and coordination, allowing tasks to share data or synchronize their operations as needed.</br>
 SLURM needs to be able to perform its jobs on any node of the cluster. This makes it so that each node should be able to access the same files. Therefore, a shared storage would have to be created. In this project, a 16GB USB drive connected to the head node is exported as a Network File System.
 
-[Click here](/research_folder/Software/Implementation/Slurm.md) to do the setup USB as shared storage and setup SLURM as a whole.
+[Click here](/research_folder/Software/Implementation/Slurm.md) to do setup USB as shared storage and setup SLURM between a head node and a compute node. In our setup slurm has been setup for the 4 nodes. Slurmd runs on all nodes whereas node01 runs slurmctld.
 
 
 ### Testing with R
