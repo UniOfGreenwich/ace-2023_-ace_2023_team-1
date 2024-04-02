@@ -94,3 +94,6 @@ Given below is the output for 3 different plot images. As samples are random, th
 <img src="../../Images/PLOT27.jpeg" alt="Plot27" title="Plot 27 from the 50 unique plots generated" width="300"/>
 <img src="../../Images/PLOT30.jpeg" alt="Plot30" title="Plot 30 from the 50 unique plots generated" width="300"/>
 <img src="../../Images/PLOT45.jpeg" alt="Plot45" title="Plot 45 from the 50 unique plots generated" width="300"/>
+
+### Reference
+1. [Testing with R](https://glmdev.medium.com/building-a-raspberry-pi-cluster-aaa8d1f3d2ca)

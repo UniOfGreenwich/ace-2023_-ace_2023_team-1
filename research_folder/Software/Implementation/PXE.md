@@ -299,3 +299,6 @@ It is by default connected to the head node as the OS and all its components wer
 ### References
 
 1. [Ubuntu PXE Setup](https://medium.com/jacklee26/set-up-pxe-server-on-ubuntu20-04-and-window-10-e69733c1de87)
+2. [Setting up an UEFI PXE server on Linux](https://www.youtube.com/watch?v=U3RC20ANomk)
+3. [How to configure PXE Network Boot Server for Ubuntu 18.04](https://www.youtube.com/watch?v=1pa4Y64y2Go&t=40s)
+4. [Ubuntu Ask](https://askubuntu.com/questions/1292032/how-can-current-ubuntu-versions-be-installed-via-pxe-network-boot-and-an-automat)
