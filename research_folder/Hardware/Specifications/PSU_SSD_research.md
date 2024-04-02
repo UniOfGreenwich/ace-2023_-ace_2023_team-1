@@ -42,7 +42,7 @@
   - Short circuit protection: Yes;
   - Dimensions (HxWxD): 87x150x140 mm;
 
-  ![PSU Chieftec 550W silver image](../Images/PSU550W.jpeg)
+  ![PSU Chieftec 550W silver image](/ace-2023_-ace_2023_team-1/research_folder/Images/PSU550W.jpeg)
 
 ## 2. <u> Chieftec CTG-750C A-80 SERIES 750W </u>
 
@@ -92,8 +92,8 @@
   - UVP: (Under Voltage Protection)
   - Warranty: 24 Months
 
-![PSU Chieftec 750W black image](../Images/PSU750W2.jpeg)
-![Cable Management of PSU Chieftec 750W black image](../Images/PSU750W.jpeg)
+![PSU Chieftec 750W black image](/ace-2023_-ace_2023_team-1/research_folder/Images/PSU750W2.jpeg)
+![Cable Management of PSU Chieftec 750W black image](/ace-2023_-ace_2023_team-1/research_folder/Images/PSU750W.jpeg)
 
 # <u> **SSD (Solid State Drive)** </u>
 
@@ -145,8 +145,8 @@
 * <u> Data Security: </u>
   - AES 256-bit Full Disk Encryption, TCG/Opal V2.0, Encrypted Drive(IEEE1667)
 
-![Back of the Samsung SSD](../Images/SSDback.jpeg)
-![Front of the Samsung SSD](../Images/SSDfront.jpeg)
+![Back of the Samsung SSD](/ace-2023_-ace_2023_team-1/research_folder/Images/SSDback.jpeg)
+![Front of the Samsung SSD](/ace-2023_-ace_2023_team-1/research_folder/Images/SSDfront.jpeg)
 
 # References
 - [Chieftec GPS-550AB A 550W](http://specsan.com/power-supply-chieftec/chieftec-gps-550ab-a-550w/) [Accessed: 22/01/2024];
