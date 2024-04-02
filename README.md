@@ -62,7 +62,7 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
    
    Firstly, all computers in the HPC setup must be able to communicate with each other. The Compute nodes (ASUS motherboards) are all connected to the head node (Raspberry pi) via LAN and are in network. Here, the DHCP (Dynamic Host Configuration Protocol) is used to allow the devices in the network (the other compute nodes) to be dynamically assigned an IP address. This simplifies the process of configuring IP addresses as it is not necessary to perform static routing and addressing on each device of the HPC. Additionally, DHCP assigns the subnet mask, default gateway, domain name server address and other configurations.
    
-   To setup DHCP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
+   To setup DHCP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md#dhcp-server) and go to DHCP setup. 
    
 <p align="center">
   <img src="research_folder/Images/DHCP.jpg" alt="Overview" style="width: 600px;"/>
@@ -72,7 +72,7 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
    
    TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files between devices on a network. It is used to specify the directory which the TFTP server needs to  server to the client. In this case, it is used to serve all the related files required for booting and show the PXE Boot menu, where users can select the operating system to install. Since all related files are stored in the tftpboot directory, this is shared using TFTP.
 
-   To setup TFTP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to TFTP setup.
+   To setup TFTP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md#configure-tftp-server) and go to TFTP setup.
 
 3. NFS
    
@@ -82,7 +82,7 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
 
    Finally, the PXE Boot menu needs to be configured. The initrd (Initial RAM disk)and vmlinuz (kernel image) files are required to be fetched once user selects operating system. This must be specified in the Boot menu file.
 
-   To setup NFS and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to NFS section. 
+   To setup NFS and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md#nfs) and go to NFS section. 
 
 Given below is an overview of the entire process
 <p align="center">
@@ -90,7 +90,7 @@ Given below is an overview of the entire process
 </p>
 
 ### OpenSSH
-A prerequisite for slurm, to allow secure file transfer and communication between nodes. Allows remote access to compute nodes.</br> For instructions on setting up OpenSSH [Click Here](/research_folder/Software/Implementation/OpenSSH.md)
+A prerequisite for slurm, to allow secure file transfer and communication between nodes. Allows remote access to compute nodes.</br> For instructions on setting up OpenSSH [Click Here](/research_folder/Software/Implementation/OpenSSH.md#openssh-setup)
 
 ### Slurm
 Slurm is a highly scalable and flexible workload manager used primarily in HPC environments. Slurm provides mechanisms for inter-task communication and coordination, allowing tasks to share data or synchronize their operations as needed.</br>
