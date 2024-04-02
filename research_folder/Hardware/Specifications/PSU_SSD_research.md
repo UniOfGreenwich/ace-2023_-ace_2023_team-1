@@ -42,7 +42,8 @@
   - Short circuit protection: Yes;
   - Dimensions (HxWxD): 87x150x140 mm;
 
-  ![PSU Chieftec 550W silver image](/ace-2023_-ace_2023_team-1/research_folder/Images/PSU550W.jpeg)
+  <img src="../../Images/PSU550W.jpeg" alt="PSU Chieftec 550W silver image" title="PSU Chieftec 550W silver image" width="550"/>
+
 
 ## 2. <u> Chieftec CTG-750C A-80 SERIES 750W </u>
 
@@ -92,8 +93,9 @@
   - UVP: (Under Voltage Protection)
   - Warranty: 24 Months
 
-![PSU Chieftec 750W black image](/ace-2023_-ace_2023_team-1/research_folder/Images/PSU750W2.jpeg)
-![Cable Management of PSU Chieftec 750W black image](/ace-2023_-ace_2023_team-1/research_folder/Images/PSU750W.jpeg)
+<img src="../../Images/PSU750W2.jpeg" alt="PSU Chieftec 750W black image" title="PSU Chieftec 750W black image" width="650"/>
+
+<img src="../../Images/PSU750W.jpeg" alt="Cable Management of PSU Chieftec 750W black image" title="Cable Management of PSU Chieftec 750W black image" width="650"/>
 
 # <u> **SSD (Solid State Drive)** </u>
 
@@ -145,8 +147,8 @@
 * <u> Data Security: </u>
   - AES 256-bit Full Disk Encryption, TCG/Opal V2.0, Encrypted Drive(IEEE1667)
 
-![Back of the Samsung SSD](/ace-2023_-ace_2023_team-1/research_folder/Images/SSDback.jpeg)
-![Front of the Samsung SSD](/ace-2023_-ace_2023_team-1/research_folder/Images/SSDfront.jpeg)
+<img src="../../Images/SSDback.jpeg" alt="Back of the Samsung SSD" title="Back of the Samsung SSD" width="650"/>
+<img src="../../Images/SSDfront.jpeg" alt="Front of the Samsung SSD" title="Front of the Samsung SSD" width="650"/>
 
 # References
 - [Chieftec GPS-550AB A 550W](http://specsan.com/power-supply-chieftec/chieftec-gps-550ab-a-550w/) [Accessed: 22/01/2024];
