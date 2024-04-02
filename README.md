@@ -7,66 +7,12 @@
 </p>
 
 ## Table of Contents
-- [File Structure](#file-structure)
 - [Video](#video)
 - [Introduction](#introduction)
 - [Operational Manual](#operational-manual)
 - [Contributors](#contributors)
 - [License](#license)
 
-## File Structure
-```
-├── Main
-|   ├── hpc_case_design
-│   |   ├── design_readme.md
-│   |   ├── 3d_printing
-│   |   │   ├── cad_files
-│   |   │   │   ├── head_shelf_design.blend
-│   |   │   │   ├── shelf_design.blend
-│   |   │   │   ├── general-shelf
-│   |   │   │   │   └── ...
-│   |   │   │   ├── head-shelf
-│   |   │   │   │   └── ...
-│   |   │   │   ├── outer-layer
-│   |   │   │   │   └── ...
-│   |   │   │   └── renders
-│   |   │   │       └── ...
-│   |   │   └── stl_files
-│   |   │       ├── general-shelf
-│   |   │       │   └── ...
-│   |   │       ├── head-shelf
-│   |   │       │   └── ...
-│   |   │       └── outer-layer
-│   |   │           └── ...
-│   |   └── laser_cutting
-│   |       ├── 3vs_files
-│   |       │   ├── inner_shelf
-│   |       │   │   └── ...
-│   |       │   ├── outer_shelf
-│   |       │   │   └── ...
-│   |       │   └── testCut.3vs
-│   |       └── dxf_files
-│   |           ├── inner_shelf
-│   |           │   └── ...
-│   |           ├── outer_shelf
-│   |           │   └── ...
-│   |           └── testCut.dxf
-|   ├── nixos
-|   |   └── ...
-|   ├── research_folder
-|   |  ├── Comparisons
-|   |  |   └── ...
-|   |  ├── Documentations
-|   |  |   └── ...
-|   |  ├── Images
-|   |  |   └── ...
-|   |  └── Researches
-|   |      └── ...
-|   └── video_dev
-|       └── scripts
-|           └── ...
-└── ...
-```
 ## Video
 <p align="center">
   <a href="https://www.youtube.com/watch?v=2bO4xLcN6Lk" title="Watch the Video">
@@ -105,26 +51,25 @@ PXE (Pre-Boot Execution Environment) is a network protocol that allows a compute
 The three main packages used as DHCPD, TFTPD and NFS-Server.
 DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS is to share the OS image and kernel files. 
 
-[Click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) to perform these prerequisite steps and PXE boot as a whole.
+[Click here](/research_folder/Software/Implementation/PXE.md) to perform these prerequisite steps and PXE boot as a whole.
 
-<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PXE.jpg" alt="DHCP" title="DHCP" width="400"/>
+<img src="/research_folder/Images/PXE.jpg" alt="DHCP" title="DHCP" width="400"/>
 
 1. NETWORK SETUP - DHCP
    
    Firstly, all computers in the HPC setup must be able to communicate with each other. The Compute nodes (ASUS motherboards) are all connected to the head node (Raspberry pi) via LAN and are in network. Here, the DHCP (Dynamic Host Configuration Protocol) is used to allow the devices in the network (the other compute nodes) to be dynamically assigned an IP address. This simplifies the process of configuring IP addresses as it is not necessary to perform static routing and addressing on each device of the HPC. Additionally, DHCP assigns the subnet mask, default gateway, domain name server address and other configurations.
    
-   To setup DHCP and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
+   To setup DHCP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
    
-   <img src="../ace-2023_-ace_2023_team-1/research_folder/Images/DHCP.jpg" alt="DHCP" title="DHCP" width="400"/>
+   <img src="/research_folder/Images/DHCP.jpg" alt="DHCP" title="DHCP" width="400"/>
 
 2. SETTING UP TFTP SERVER_
    
    TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files between devices on a network. It is used to specify the directory which the TFTP server needs to  server to the client. In this case, it is used to serve all the related files required for booting and show the PXE Boot menu, where users can select the operating system to install. Since all related files are stored in the tftpboot directory, this is shared using TFTP.
 
-   To setup TFTP and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to TFTP setup.
+   To setup TFTP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to TFTP setup.
 
    
- 
 
 3. NFS
    
@@ -134,10 +79,10 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
 
    Finally, the PXE Boot menu needs to be configured. The initrd (Initial RAM disk)and vmlinuz (kernel image) files are required to be fetched once user selects operating system. This must be specified in the Boot menu file.
 
-   To setup NFS and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to NFS section. 
+   To setup NFS and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to NFS section. 
 
 Given below is an overview of the entire process
-<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/OVERVIEW.jpg" alt="DHCP" title="DHCP" width="400"/>
+<img src="/research_folder/Images/OVERVIEW.jpg" alt="DHCP" title="DHCP" width="400"/>
 
 ### OpenSSH
 A prerequisite for slurm, to allow secure file transfer and communication between nodes. Allows remote access to compute nodes.</br> For instructions on setting up OpenSSH [Click Here](/research_folder/Software/Implementation/OpenSSH.md)
@@ -146,7 +91,7 @@ A prerequisite for slurm, to allow secure file transfer and communication betwee
 Slurm is a highly scalable and flexible workload manager used primarily in HPC environments. Slurm provides mechanisms for inter-task communication and coordination, allowing tasks to share data or synchronize their operations as needed.</br>
 SLURM needs to be able to perform its jobs on any node of the cluster. This makes it so that each node should be able to access the same files. Therefore, a shared storage would have to be created. In this project, a 16GB USB drive connected to the head node is exported as a Network File System.
 
-[Click here]([../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/Slurm.md](https://github.com/TeachingMaterial/ace-2023_-ace_2023_team-1/blob/main/research_folder/Software/Implementation/PXE.md)) to do the setup USB as shared storage and setup SLURM as a whole.
+[Click here]([/research_folder/Software/Implementation/Slurm.md](https://github.com/TeachingMaterial/ace-2023_-ace_2023_team-1/blob/main/research_folder/Software/Implementation/PXE.md)) to do the setup USB as shared storage and setup SLURM as a whole.
 
 
 ### Testing with R
@@ -156,14 +101,14 @@ Therefore, 50 plots are generated at once, as shown below.
 
 Here are some of the plots,
 
-<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PLOT27.jpeg" alt="PLOT 27" title="PLOT 27" width="400"/>
+<img src="/research_folder/Images/PLOT27.jpeg" alt="PLOT 27" title="PLOT 27" width="400"/>
 
-<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PLOT30.jpeg" alt="PLOT 30" title="PLOT 30" width="400"/>
+<img src="/research_folder/Images/PLOT30.jpeg" alt="PLOT 30" title="PLOT 30" width="400"/>
 
-<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PLOT45.jpeg" alt="PLOT 45" title="PLOT 45" width="400"/>
+<img src="/research_folder/Images/PLOT45.jpeg" alt="PLOT 45" title="PLOT 45" width="400"/>
 
 
-[click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) to view detailed documentation and code.
+[click here](/research_folder/Software/Implementation/PXE.md) to view detailed documentation and code.
 As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters.
 
 ## Recommendations
