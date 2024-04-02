@@ -140,7 +140,7 @@ Given below is an overview of the entire process
 <img src="../ace-2023_-ace_2023_team-1/research_folder/Images/OVERVIEW.jpg" alt="DHCP" title="DHCP" width="400"/>
 
 ### OpenSSH
-A prerequisite for slurm, to allow secure file transfer and communication between nodes. Allows remote access to compute nodes.</br> For instructions on setting up OpenSSH [Click Here](/research_folder/Software/Implemetation)
+A prerequisite for slurm, to allow secure file transfer and communication between nodes. Allows remote access to compute nodes.</br> For instructions on setting up OpenSSH [Click Here](/ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/OpenSSH.md)
 
 ### Slurm
 Slurm is a highly scalable and flexible workload manager used primarily in HPC environments. Slurm provides mechanisms for inter-task communication and coordination, allowing tasks to share data or synchronize their operations as needed.</br>
