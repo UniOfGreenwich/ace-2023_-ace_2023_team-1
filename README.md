@@ -1,6 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/vcAhwuzK)
 # Design & Development of a Modular High-Performance Computer (HPC)
-## ELEE1119 Advantage Computer Engineering 2023/24
+## ELEE1119 Advanced Computer Engineering | Academic Year 2023/24
 <p align="center">
   <img src="research_folder/Images/CaseFront.jpeg" alt="Front Case" style="width: 375px; margin-right: 10px;"/>
   <img src="research_folder/Images/CaseBack.jpeg" alt="Back Case" style="width: 300px;"/>
@@ -29,25 +29,22 @@
 </p>
 
 ## Introduction
-Welcome to the group project README file for the Advanced Computer Engineering module from module leader Sebastian Blair of Team -1.
+Welcome to the README file for the Advanced Computer Engineering module at the University of Greenwich, Academic Year 2023/24. This module is lead by Sebastian Blair. This project has been developed by `Team -1`. For full list of contributors consider the [contributors](#contributors) section.
 
-This document provides an overview of the Design and Implementation of the High Performance Computing (HPC) Systems project, including an explanation of the steps taken to develop the final products: a prototype, video and documentation demonstrating the collaborative effort and technical approach.
+This document provides an overview of the Design and Implementation of the High Performance Computing (HPC) System, including a brief explanation of the steps taken to develop the final products: a prototype, video and documentation demonstrating the collaborative effort and technical approach.
 
-HPC involves using clusters of interconnected servers to perform complex calculations quickly. These clusters are nodes managed by schedulers to optimise resource usage. Supercomputers, essentially vast clusters of computing nodes, significantly outperform individual desktops or servers. LinuxⓇ is the leading operating system for HPC.
-It is important to note that although a significant milestone has been reached with the creation of this prototype, there is room for further development and improvements.
-For detailed reports, insights, and technical documentation, the documentation is hosted in a separate directory in this repository.
+The HPC involves using multiple and interconnected computers in a cluster to perform complex computations. These clusters are nodes managed by schedulers to optimise resource usage. LinuxⓇ is the leading operating system for HPC. It is important to note that although a significant milestone has been reached with the creation of this prototype, there is room for further development and improvements.
 
 ## Setup
-To carry out this project, the foundational components required are a Raspberry Pi (Model 4B in this prototype), 3 Motherboards (ASUS CSB), and a 4/5 port switch. The Raspberry Pi acts as the head node, and the motherboards acting as compute nodes.  
+To carry out this project, the foundational components required are a Raspberry Pi (Model 4B), 3 Motherboards (ASUS CSB), and a 4/5 port switch. The Raspberry Pi acts as the head node, and the motherboards acting as compute nodes.
 
 ## Design and Manufacturing
-To manufacture a copy of the HPC an FDM (Fused Deposition Modeling) 3D Printer is necessary with a minimum hotbed size of 300 by 300mm, and a laser cutter with the minimum size of 300 by 600mm. 
+To manufacture a copy of the HPC, an FDM (Fused Deposition Modeling) 3D Printer is necessary with a minimum hotbed size of 300 by 300mm, and a laser cutter with the minimum size of 300 by 600mm. 
 
 PLA (Polylactic Acid) has been used as the filament of choice in this prototype, however ABS or PETG are just as appropriate. The laser cutting has been done using 9mm thick plywood, it is recommended to keep the thickness at 9mm. However, alternative materials such as acrlyic may be used instead of plywood. All CAD, STL, 3VS, and DXF design files can be located in the `hpc_case_design` folder of this repository. [Click Here](/hpc_case_design/design_readme.md) to learn more about the design and manufacturing of this project. 
 
 ### Cooling overview
-Cooling for this HPC was done through a combination of various cooling methods like row cooling, forced convection and raised floor cooling. 
-Knowing the wattage of the HPC allowed for calculation of the cooling requirements using BTU/br. With the intake of cool air, the exhaust space was calculated.</br> View the link below for more info:
+Cooling for this HPC was done through a combination of various cooling methods like row cooling, forced convection and raised floor cooling. Knowing the wattage of the HPC allowed for calculation of the cooling requirements using BTU/br. With the intake of cool air, the exhaust space was calculated.</br> View the link below for more info:
 
 - [Click Here](/hpc_case_design/cooling)
 
@@ -107,7 +104,7 @@ SLURM needs to be able to perform its jobs on any node of the cluster. This make
 Finally, to test the SLURM setup, an R script is created which generates 10000 random datasets, these datasets are then used to create a density plot jpg. Then the script is run 50 times parallelly on a single partition. 
 Therefore, 50 plots are generated at once, as shown below.
 
-Here are some of the plots,
+Here are some of the plots:
 
 <p align="center">
   <img  src="research_folder/Images/PLOT27.jpeg" alt="Plot 27" style="width: 600px;"/>
@@ -119,7 +116,7 @@ Here are some of the plots,
   <img  src="research_folder/Images/PLOT45.jpeg" alt="Plot 45" style="width: 600px;"/>
 </p>
 
-[click here](/research_folder/Software/Implementation/TestRPRogram.md) to view detailed documentation and code.
+[Click here](/research_folder/Software/Implementation/TestRPRogram.md) to view detailed documentation and code.
 As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters. 
 
 ## Recommendations
