@@ -297,13 +297,6 @@ sudo systemctl start slurmd
 
 After this, sinfo can be run (on the master node) to view all nodes detected and in setup along with their details
 
+### References
 
-
-
-
-
-
-
-
-
-
+1. [Slurm Basics](https://glmdev.medium.com/building-a-raspberry-pi-cluster-784f0df9afbd)

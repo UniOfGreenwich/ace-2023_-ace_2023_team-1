@@ -50,5 +50,3 @@ The video structure is divided into the following sections alongside the assigne
 9. Project Management (Wojtek)
 10. Performance Evaluation & Discussion (Fikayo)
 11. Conclusion & Future Work (Fikayo)
-
-## Final Video

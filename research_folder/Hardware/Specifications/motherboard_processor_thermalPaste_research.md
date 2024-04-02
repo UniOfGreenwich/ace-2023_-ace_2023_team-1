@@ -68,7 +68,7 @@ This file presents an overview of the ASUS CS-B Motherboard.
 12. Form Factor: 
     - MicroATX Form Factor: 9.6" x 9.6" (24.4cm x 24.4cm)
 
-![ASUS CS-B Motherboard Image](/ace-2023_-ace_2023_team-1/research_folder/Images/asus_csb_motherboard_image.png)
+<img src="../../Images/asus_csb_motherboard_image.png" alt="ASUS CS-B Motherboard Image" title="ASUS CS-B Motherboard Image" width="450"/>
 
 # Intel Core i5-4590 Processor Research
 
@@ -81,7 +81,8 @@ This file presents an overview of the ASUS CS-B Motherboard.
 6. Bus Speed = 5 GT/s
 7. TDP = 84W
 
-![Intel Core i5-4590 Processor Image](/ace-2023_-ace_2023_team-1/research_folder/Images/intel_core_i5-4590_cpu.jpg)
+<img src="../../Images/intel_core_i5-4590_cpu.jpg" alt="Intel Core i5-4590 Processor Image" title="Intel Core i5-4590 Processor Image" width="450"/>
+
 
 # Thermal Paste Research
 
@@ -93,7 +94,8 @@ This file presents an overview of the ASUS CS-B Motherboard.
 - Four to six applications per tube
 - Resealable syringe applicator
 
-![StarTech Thermal Paste GR-005](/ace-2023_-ace_2023_team-1/research_folder/Images/thermal_paste_image.jpg)
+<img src="../../Images/thermal_paste_image.jpg" alt="StarTech Thermal Paste GR-005" title="StarTech Thermal Paste GR-005" width="450"/>
+
 
 # References
 1. [ASUS CS-B Motherboard Specification Document](asus_csb_motherboard_spec.pdf) [Accessed: 22/01/2024]

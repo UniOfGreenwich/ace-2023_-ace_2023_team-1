@@ -141,7 +141,7 @@ mATX Form Factor</br>
 * Full-length mini-PCIe slot supports full/half length mini card.
 https://www.asus.com/commercial-motherboard/csb/specifications/
 
- ![ASUS CS-B Motherboard detalis](/ace-2023_-ace_2023_team-1/research_folder/Images/ScreenshotAsus.png)
+ <img src="../../Images/ScreenshotAsus.png" alt="ASUS CS-B Motherboard detalis" title="ASUS CS-B Motherboard detalis" width="650"/>
 
 # Okdo Rock 4c+
 •	ROCK 4C+ SBC based on the powerful Rockchip RK3399 T SoC</br>
