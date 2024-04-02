@@ -2,14 +2,22 @@
 # Design & Development of a Modular High-Performance Computer (HPC)
 ## ELEE1119 Advantage Computer Engineering 2023/24
 <p align="center">
-  <img src="research_folder/Images/CaseFront.jpeg" alt="Front Case" style="width: 250px; margin-right: 10px;"/>
-  <img src="research_folder/Images/CaseBack.jpeg" alt="Back Case" style="width: 200px;"/>
+  <img src="research_folder/Images/CaseFront.jpeg" alt="Front Case" style="width: 375px; margin-right: 10px;"/>
+  <img src="research_folder/Images/CaseBack.jpeg" alt="Back Case" style="width: 300px;"/>
 </p>
 
 ## Table of Contents
 - [Video](#video)
 - [Introduction](#introduction)
-- [Operational Manual](#operational-manual)
+- [Setup](#setup)
+- [Design and Manufacturing](#design-and-manufacturing)
+  - [Cooling Overview](#cooling-overview)
+- [Software Implementation](#software-implementation)
+  - [PXE Boot](#pxe-boot)
+  - [OpenSSH](#openssh)
+  - [Slurm](#slurm)
+  - [Testing with R](#testing-with-r)
+- [Recommendations](#recommendations)
 - [Contributors](#contributors)
 - [License](#license)
 
@@ -35,7 +43,7 @@ To carry out this project, the foundational components required are a Raspberry 
 ## Design and Manufacturing
 To manufacture a copy of the HPC an FDM (Fused Deposition Modeling) 3D Printer is necessary with a minimum hotbed size of 300 by 300mm, and a laser cutter with the minimum size of 300 by 600mm. 
 
-PLA (Polylactic Acid) has been used as the filament of choice in this prototype, however ABS or PETG are just as appropriate. The laser cutting has been done using 9mm thick plywood, it is recommended to keep the thickness at 9mm. However, alternative materials such as acrlyic may be used instead of plywood. All CAD, STL, 3VS, and DXF design files can be located in the `hpc_case_design` folder of this repository. 
+PLA (Polylactic Acid) has been used as the filament of choice in this prototype, however ABS or PETG are just as appropriate. The laser cutting has been done using 9mm thick plywood, it is recommended to keep the thickness at 9mm. However, alternative materials such as acrlyic may be used instead of plywood. All CAD, STL, 3VS, and DXF design files can be located in the `hpc_case_design` folder of this repository. [Click Here](/hpc_case_design/design_readme.md) to learn more about the design and manufacturing of this project. 
 
 ### Cooling overview
 Cooling for this HPC was done through a combination of various cooling methods like row cooling, forced convection and raised floor cooling. 
@@ -53,23 +61,21 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
 
 [Click here](/research_folder/Software/Implementation/PXE.md) to perform these prerequisite steps and PXE boot as a whole.
 
-<img src="/research_folder/Images/PXE.jpg" alt="DHCP" title="DHCP" width="400"/>
-
 1. NETWORK SETUP - DHCP
    
    Firstly, all computers in the HPC setup must be able to communicate with each other. The Compute nodes (ASUS motherboards) are all connected to the head node (Raspberry pi) via LAN and are in network. Here, the DHCP (Dynamic Host Configuration Protocol) is used to allow the devices in the network (the other compute nodes) to be dynamically assigned an IP address. This simplifies the process of configuring IP addresses as it is not necessary to perform static routing and addressing on each device of the HPC. Additionally, DHCP assigns the subnet mask, default gateway, domain name server address and other configurations.
    
    To setup DHCP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
    
-   <img src="/research_folder/Images/DHCP.jpg" alt="DHCP" title="DHCP" width="400"/>
+<p align="center">
+  <img src="research_folder/Images/DHCP.jpg" alt="Overview" style="width: 600px;"/>
+</p>
 
 2. SETTING UP TFTP SERVER_
    
    TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files between devices on a network. It is used to specify the directory which the TFTP server needs to  server to the client. In this case, it is used to serve all the related files required for booting and show the PXE Boot menu, where users can select the operating system to install. Since all related files are stored in the tftpboot directory, this is shared using TFTP.
 
    To setup TFTP and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to TFTP setup.
-
-   
 
 3. NFS
    
@@ -82,7 +88,9 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
    To setup NFS and get more in depth info, [click here](/research_folder/Software/Implementation/PXE.md) and go to NFS section. 
 
 Given below is an overview of the entire process
-<img src="/research_folder/Images/OVERVIEW.jpg" alt="DHCP" title="DHCP" width="400"/>
+<p align="center">
+  <img src="research_folder/Images/OVERVIEW.jpg" alt="Overview" style="width: 600px;"/>
+</p>
 
 ### OpenSSH
 A prerequisite for slurm, to allow secure file transfer and communication between nodes. Allows remote access to compute nodes.</br> For instructions on setting up OpenSSH [Click Here](/research_folder/Software/Implementation/OpenSSH.md)
@@ -101,12 +109,15 @@ Therefore, 50 plots are generated at once, as shown below.
 
 Here are some of the plots,
 
-<img src="/research_folder/Images/PLOT27.jpeg" alt="PLOT 27" title="PLOT 27" width="400"/>
-
-<img src="/research_folder/Images/PLOT30.jpeg" alt="PLOT 30" title="PLOT 30" width="400"/>
-
-<img src="/research_folder/Images/PLOT45.jpeg" alt="PLOT 45" title="PLOT 45" width="400"/>
-
+<p align="center">
+  <img  src="research_folder/Images/PLOT27.jpeg" alt="Plot 27" style="width: 600px;"/>
+</p>
+<p align="center">
+  <img  src="research_folder/Images/PLOT30.jpeg" alt="Plot 30" style="width: 600px;"/>
+</p>
+<p align="center">
+  <img  src="research_folder/Images/PLOT45.jpeg" alt="Plot 45" style="width: 600px;"/>
+</p>
 
 [click here](/research_folder/Software/Implementation/TestRPRogram.md) to view detailed documentation and code.
 As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters.
