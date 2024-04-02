@@ -290,11 +290,15 @@ After this you should power on your compute node
 The compute node will connect to the network and obtain an IP address.
 After this the bootmenu shows up after acquiring syslinux.efi
 
-<img src="../../Images/PXEbootmenu.jpeg" alt="squeue command result" title="result of squeue command" width="450"/>
+<img src="/Images/PXEbootmenu.jpeg" alt="squeue command result" title="result of squeue command" width="450"/>
 
 After selecting Ubuntu20.04, the initrd and vmlinuz files load.
 Eventually Ubuntu starts on the compute node after loading all dependencies.
 It is by default connected to the head node as the OS and all its components were loaded due to the compute node being in the network connected to head node. Therefore, no static routing and addressing is required and compute node is ready to use.
+
+### Reference
+
+1. [Ubuntu PXE Setup](https://medium.com/jacklee26/set-up-pxe-server-on-ubuntu20-04-and-window-10-e69733c1de87)
 
 
 
