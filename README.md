@@ -95,10 +95,52 @@ PLA (Polylactic Acid) has been used as the filament of choice in this prototype,
 The HPC cluster here has been setup with two partitions, mycluster and mycluster2 with each having 2 nodes.
 
 ### PXE Boot
+PXE (Pre-Boot Execution Environment) is a network protocol that allows a computer to boot and load its OS using resources from a server rather than local storage (USB stick, SSD, Hard Dive, etc.). This is done by leveraging the capabilities of DHCP, TFTP and NFS.
+The three main packages used as DHCPD, TFTPD and NFS-Server.
+DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS is to share the OS image and kernel files. 
+[Click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) to perform these prerequisite steps and PXE boot as a whole.
+
+1. NETWORK SETUP - DHCP
+   
+   Firstly, all computers in the HPC setup must be able to communicate with each other. The Compute nodes (ASUS motherboards) are all connected to the head node (Raspberry pi) via LAN and are in network. Here, the DHCP (Dynamic Host Configuration Protocol) is used to allow the devices in the network (the other compute nodes) to be dynamically assigned an IP address. This simplifies the process of configuring IP addresses as it is not necessary to perform static routing and addressing on each device of the HPC. Additionally, DHCP assigns the subnet mask, default gateway, domain name server address and other configurations.
+   
+   To setup DHCP and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
+
+
+2. SETTING UP TFTP SERVER_
+   
+   TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files between devices on a network. It is used to specify the directory which the TFTP server needs to  server to the client. In this case, it is used to serve all the related files required for booting and show the PXE Boot menu, where users can select the operating system to install. Since all related files are stored in the tftpboot directory, this is shared using TFTP.
+
+   To setup TFTP and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
+
+3. NFS
+   
+   After selecting the operating system, it is important for users to be able to load the images, kernel files and more. These files need to be accessible over the network. Therefore, NFS (Network File System) is used. This can be done by adding the directory which contains these files as a shared directory across the network. 
+
+   An ISO image of an Ubuntu distribution is firstly installed and mounted. Here, a live installer of Ubuntu 20.04 is installed. It is then copied to a certain directory (ubuntu). This directory now contains all the iso files necessary to install the OS on a machine. This directory needs to be exported over the network and available to compute nodes. Hence it must be configured in the NFS exports file.
+
+   Finally, the PXE Boot menu needs to be configured. The initrd (Initial RAM disk)and vmlinuz (kernel image) files are required to be fetched once user selects operating system. This must be specified in the Boot menu file.
+
+   To setup NFS and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to NFS section. 
+
 
 ### Slurm
 
+SLURM needs to be able to perform its jobs on any node of the cluster. This makes it so that each node should be able to access the same files. Therefore, a shared storage would have to be created. In this project, a 16GB USB drive connected to the head node is exported as a Network File System.
+
+[Click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/Slurm.md) to do the setup USB as shared storage and setup SLURM as a whole.
+
+
 ### Testing with R
+
+Finally, to test the SLURM setup, an R script is created which generates 10000 random datasets, these datasets are then used to create a density plot jpg. Then the script is run 50 times parallelly on a single partition. 
+Therefore, 50 plots are generated at once, as shown below.
+
+Here are some of the plots,
+
+
+Click here to view detailed documentation and code.
+As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters.
 
 ## Recommendations
 Some of the project's next steps include incorporating technologies to improve its capabilities and test its abilities. Integrating SingularityCE can simplify the deployment of complex applications in HPC and scientific computing environments, leveraging containerisation for portability and reproducibility. John the Ripper could enhance security by identifying vulnerabilities in different operating systems. Prometheus and Jaeger will facilitate the monitoring and tracking framework, offering insights into system performance and operational dynamics. Furthermore, these integrations will be relatively easy by taking advantage of Slurm's compatibility with Docker.
