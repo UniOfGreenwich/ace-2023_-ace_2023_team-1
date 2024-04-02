@@ -98,20 +98,27 @@ The HPC cluster here has been setup with two partitions, mycluster and mycluster
 PXE (Pre-Boot Execution Environment) is a network protocol that allows a computer to boot and load its OS using resources from a server rather than local storage (USB stick, SSD, Hard Dive, etc.). This is done by leveraging the capabilities of DHCP, TFTP and NFS.
 The three main packages used as DHCPD, TFTPD and NFS-Server.
 DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS is to share the OS image and kernel files. 
+
 [Click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) to perform these prerequisite steps and PXE boot as a whole.
+
+<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PXE.jpg" alt="DHCP" title="DHCP" width="400"/>
 
 1. NETWORK SETUP - DHCP
    
    Firstly, all computers in the HPC setup must be able to communicate with each other. The Compute nodes (ASUS motherboards) are all connected to the head node (Raspberry pi) via LAN and are in network. Here, the DHCP (Dynamic Host Configuration Protocol) is used to allow the devices in the network (the other compute nodes) to be dynamically assigned an IP address. This simplifies the process of configuring IP addresses as it is not necessary to perform static routing and addressing on each device of the HPC. Additionally, DHCP assigns the subnet mask, default gateway, domain name server address and other configurations.
    
    To setup DHCP and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
-
+   
+   <img src="../ace-2023_-ace_2023_team-1/research_folder/Images/DHCP.jpg" alt="DHCP" title="DHCP" width="400"/>
 
 2. SETTING UP TFTP SERVER_
    
    TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files between devices on a network. It is used to specify the directory which the TFTP server needs to  server to the client. In this case, it is used to serve all the related files required for booting and show the PXE Boot menu, where users can select the operating system to install. Since all related files are stored in the tftpboot directory, this is shared using TFTP.
 
-   To setup TFTP and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to DHCP setup. 
+   To setup TFTP and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to TFTP setup.
+
+   
+ 
 
 3. NFS
    
@@ -123,7 +130,8 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
 
    To setup NFS and get more in depth info, [click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) and go to NFS section. 
 
-
+Given below is an overview of the entire process
+<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/OVERVIEW.jpg" alt="DHCP" title="DHCP" width="400"/>
 ### Slurm
 
 SLURM needs to be able to perform its jobs on any node of the cluster. This makes it so that each node should be able to access the same files. Therefore, a shared storage would have to be created. In this project, a 16GB USB drive connected to the head node is exported as a Network File System.
@@ -138,8 +146,14 @@ Therefore, 50 plots are generated at once, as shown below.
 
 Here are some of the plots,
 
+<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PLOT27.jpeg" alt="PLOT 27" title="PLOT 27" width="400"/>
 
-Click here to view detailed documentation and code.
+<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PLOT30.jpeg" alt="PLOT 30" title="PLOT 30" width="400"/>
+
+<img src="../ace-2023_-ace_2023_team-1/research_folder/Images/PLOT45.jpeg" alt="PLOT 45" title="PLOT 45" width="400"/>
+
+
+[click here](../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/PXE.md) to view detailed documentation and code.
 As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters.
 
 ## Recommendations
