@@ -27,19 +27,19 @@ Computing clusters consist of many specialised nodes
 
 Queue system may manage several different queues for managing differnet hardware configs
 
-![Alt text](image.png)
+![Alt text](/ace-2023_-ace_2023_team-1/research_folder/Images/queues.png)
 
 It is the responsibility of the user to send the tasks to the correct queue when sent to the queue system.
 
 jobs are submitted to queue system via submission script specify not only the commands to be run by compute nodes but the resources needed as well. the queue system turns the script to a job and specifies job id to identify it.
 
-![Alt text](submission_script-1.png)
+![Alt text](/ace-2023_-ace_2023_team-1/research_folder/Images/submission_script.png)
 
 once jobs are created by queue system they may wait for a bit before starting depending on resources requested and degree to which cluster is being used.
 
 its the job of the queue scheduler to monitor usage patterns of cluster and determine the optimal optimal strategy for starting jobs on computer. It seeks to maximise use of computer and manage equitable access of computer.
 
-![Alt text](queue-scheduler-1.png)
+![Alt text](/ace-2023_-ace_2023_team-1/research_folder/Images/queue_scheduler.png)
 
 ## SCRIPTS
 
