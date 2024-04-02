@@ -138,8 +138,12 @@ DHCPD is used to create a network. TFTPD is used to create a TFTP Server and NFS
 
 Given below is an overview of the entire process
 <img src="../ace-2023_-ace_2023_team-1/research_folder/Images/OVERVIEW.jpg" alt="DHCP" title="DHCP" width="400"/>
-### Slurm
 
+### OpenSSH
+A prerequisite for slurm, to allow secure file transfer and communication between nodes. Allows remote access to compute nodes.</br> For instructions on setting up OpenSSH [Click Here](/research_folder/Software/Implemetation)
+
+### Slurm
+Slurm is a highly scalable and flexible workload manager used primarily in HPC environments. Slurm provides mechanisms for inter-task communication and coordination, allowing tasks to share data or synchronize their operations as needed.</br>
 SLURM needs to be able to perform its jobs on any node of the cluster. This makes it so that each node should be able to access the same files. Therefore, a shared storage would have to be created. In this project, a 16GB USB drive connected to the head node is exported as a Network File System.
 
 [Click here]([../ace-2023_-ace_2023_team-1/research_folder/Software/Implementation/Slurm.md](https://github.com/TeachingMaterial/ace-2023_-ace_2023_team-1/blob/main/research_folder/Software/Implementation/PXE.md)) to do the setup USB as shared storage and setup SLURM as a whole.
