@@ -91,7 +91,7 @@ A prerequisite for slurm, to allow secure file transfer and communication betwee
 Slurm is a highly scalable and flexible workload manager used primarily in HPC environments. Slurm provides mechanisms for inter-task communication and coordination, allowing tasks to share data or synchronize their operations as needed.</br>
 SLURM needs to be able to perform its jobs on any node of the cluster. This makes it so that each node should be able to access the same files. Therefore, a shared storage would have to be created. In this project, a 16GB USB drive connected to the head node is exported as a Network File System.
 
-[Click here]([/research_folder/Software/Implementation/Slurm.md](https://github.com/TeachingMaterial/ace-2023_-ace_2023_team-1/blob/main/research_folder/Software/Implementation/PXE.md)) to do the setup USB as shared storage and setup SLURM as a whole.
+[Click here](/research_folder/Software/Implementation/Slurm.md) to do the setup USB as shared storage and setup SLURM as a whole.
 
 
 ### Testing with R
@@ -108,7 +108,7 @@ Here are some of the plots,
 <img src="/research_folder/Images/PLOT45.jpeg" alt="PLOT 45" title="PLOT 45" width="400"/>
 
 
-[click here](/research_folder/Software/Implementation/PXE.md) to view detailed documentation and code.
+[click here](/research_folder/Software/Implementation/TestRPRogram.md) to view detailed documentation and code.
 As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters.
 
 ## Recommendations
