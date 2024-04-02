@@ -91,6 +91,12 @@ To manufacture a copy of the HPC an FDM (Fused Deposition Modeling) 3D Printer i
 
 PLA (Polylactic Acid) has been used as the filament of choice in this prototype, however ABS or PETG are just as appropriate. The laser cutting has been done using 9mm thick plywood, it is recommended to keep the thickness at 9mm. However, alternative materials such as acrlyic may be used instead of plywood. All CAD, STL, 3VS, and DXF design files can be located in the `hpc_case_design` folder of this repository. 
 
+### Cooling overview
+Cooling for this HPC was done through a combination of various cooling methods like row cooling, forced convection and raised floor cooling. 
+Knowing the wattage of the HPC allowed for calculation of the cooling requirements using BTU/br. With the intake of cool air, the exhaust space was calculated.</br> View the link below for more info:
+
+- [Click Here](/ace-2023_-ace_2023_team-1/hpc_case_design/cooling)
+
 ## Software Implementation
 The HPC cluster here has been setup with two partitions, mycluster and mycluster2 with each having 2 nodes.
 
