@@ -83,16 +83,14 @@ batch --array=[1-50] submit.sh
 As a result the script will be run 50 times and 50 different plots are generated.
 Running squeue shows:
 
-![squeue command result](../../Images/squeue.jpeg "result of squeue command")
-
+!
+<img src="../../Images/squeue.jpeg" alt="squeue command result" title="result of squeue command" width="300"/>
 
 above, multiple jobs are running parallelly and are using either of the nodes.
 The plots folder has 50 images as it is generated 50 times and 50 slurm outputs are made.
 
 Given below is the output for 3 different plot images. As samples are random, there are slight variations in all of them.
 
-![Plot27](../../Images/PLOT27.jpeg "Plot 27 from the 50 unique plots generated")
-
-![Plot30](../../Images/PLOT30.jpeg "Plot 30 from the 50 unique plots generated")
-
-![Plot45](../../Images/PLOT45.jpeg "Plot 454 from the 50 unique plots generated")
+<img src="../../Images/PLOT27.jpeg" alt="Plot27" title="Plot 27 from the 50 unique plots generated" width="300"/>
+<img src="../../Images/PLOT30.jpeg" alt="Plot30" title="Plot 30 from the 50 unique plots generated" width="300"/>
+<img src="../../Images/PLOT45.jpeg" alt="Plot45" title="Plot 45 from the 50 unique plots generated" width="300"/>
