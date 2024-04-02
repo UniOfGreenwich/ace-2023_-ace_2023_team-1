@@ -120,7 +120,7 @@ Here are some of the plots,
 </p>
 
 [click here](/research_folder/Software/Implementation/TestRPRogram.md) to view detailed documentation and code.
-As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters.
+As a result, SLURM was used to run a job i.e., generating plot from 10000 samples 50 times in parallel. This mimics data processing of large datasets which is a major use case of HPC clusters. 
 
 ## Recommendations
 Some of the project's next steps include incorporating technologies to improve its capabilities and test its abilities. Integrating SingularityCE can simplify the deployment of complex applications in HPC and scientific computing environments, leveraging containerisation for portability and reproducibility. John the Ripper could enhance security by identifying vulnerabilities in different operating systems. Prometheus and Jaeger will facilitate the monitoring and tracking framework, offering insights into system performance and operational dynamics. Furthermore, these integrations will be relatively easy by taking advantage of Slurm's compatibility with Docker.
