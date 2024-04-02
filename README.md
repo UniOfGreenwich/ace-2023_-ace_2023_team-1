@@ -95,7 +95,7 @@ PLA (Polylactic Acid) has been used as the filament of choice in this prototype,
 Cooling for this HPC was done through a combination of various cooling methods like row cooling, forced convection and raised floor cooling. 
 Knowing the wattage of the HPC allowed for calculation of the cooling requirements using BTU/br. With the intake of cool air, the exhaust space was calculated.</br> View the link below for more info:
 
-- [Click Here](/ace-2023_-ace_2023_team-1/hpc_case_design/cooling/Cooling_Requirements.md)
+- [Click Here](/hpc_case_design/cooling)
 
 ## Software Implementation
 The HPC cluster here has been setup with two partitions, mycluster and mycluster2 with each having 2 nodes.
