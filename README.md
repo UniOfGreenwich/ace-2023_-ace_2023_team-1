@@ -92,7 +92,7 @@ To manufacture a copy of the HPC an FDM (Fused Deposition Modeling) 3D Printer i
 PLA (Polylactic Acid) has been used as the filament of choice in this prototype, however ABS or PETG are just as appropriate. The laser cutting has been done using 9mm thick plywood, it is recommended to keep the thickness at 9mm. However, alternative materials such as acrlyic may be used instead of plywood. All CAD, STL, 3VS, and DXF design files can be located in the `hpc_case_design` folder of this repository. 
 
 ## Software Implementation
-The HPC cluster here has been setup with two partitions, mycluster and mycluster2 with each having 2 nodes.
+The HPC cluster here has been setup with two partitions, mycluster and mycluster2 with each having 2 nodes. The nodes are name node01, node02, node03 and node04. node01(headnode) and node04 are part of partition mycluster whereas node02 and node03 are part of partition mycluster2.
 
 ### PXE Boot
 PXE (Pre-Boot Execution Environment) is a network protocol that allows a computer to boot and load its OS using resources from a server rather than local storage (USB stick, SSD, Hard Dive, etc.). This is done by leveraging the capabilities of DHCP, TFTP and NFS.
@@ -141,7 +141,7 @@ SLURM needs to be able to perform its jobs on any node of the cluster. This make
 
 ### Testing with R
 
-Finally, to test the SLURM setup, an R script is created which generates 10000 random datasets, these datasets are then used to create a density plot jpg. Then the script is run 50 times parallelly on a single partition. 
+Finally, to test the SLURM setup, an R script is created which generates 10000 random datasets, these datasets are then used to create a density plot jpg. Then the script is run 50 times parallelly on a single partition.  This has been tested and run on the partition mycluster.
 Therefore, 50 plots are generated at once, as shown below.
 
 Here are some of the plots,
