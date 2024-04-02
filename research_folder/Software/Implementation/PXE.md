@@ -290,7 +290,7 @@ After this you should power on your compute node
 The compute node will connect to the network and obtain an IP address.
 After this the bootmenu shows up after acquiring syslinux.efi
 
-*Insert Boot menu*
+<img src="../../Images/PXEbootmenu.jpeg" alt="squeue command result" title="result of squeue command" width="450"/>
 
 After selecting Ubuntu20.04, the initrd and vmlinuz files load.
 Eventually Ubuntu starts on the compute node after loading all dependencies.

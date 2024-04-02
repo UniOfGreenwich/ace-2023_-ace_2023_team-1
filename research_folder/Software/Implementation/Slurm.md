@@ -66,9 +66,9 @@ Here, the USB drive is formatted and a d
 
 Locate the flash drive using ```lsblk``` command. 
 
-```
 
-```
+<img src="../../Images/lsblk.jpeg" alt="lsblk" title="lsblk result" width="400"/>
+
 
 The flash drive is sda. perform the following steps:
 
